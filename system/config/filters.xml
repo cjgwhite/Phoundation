@@ -1,0 +1,40 @@
+
+<filters>
+
+    <filter>
+        <pattern>/web/(css|images|javascript)/.*</pattern>
+        <filename>PassThruFilter.php</filename>
+        <classname>PassThruFilter</classname>
+    </filter>
+
+    <filter>
+        <pattern>.*</pattern>
+        <filename>authenticatefilter.php</filename>
+        <classname>AuthenticateFilter</classname>
+    </filter>
+
+    <filter>
+        <pattern>.*</pattern>
+        <filename>AuthoriseFilter.php</filename>
+        <classname>AuthoriseFilter</classname>
+    </filter>
+
+    <filter>
+        <pattern>/web/resources/.*</pattern>
+        <filename>PassThruFilter.php</filename>
+        <classname>PassThruFilter</classname>
+    </filter>
+
+    <filter>
+        <pattern>.*\.html.*</pattern>
+        <filename>templatefilter.php</filename>
+        <classname>TemplateFilter</classname>
+    </filter>
+
+    <filter>
+        <pattern>.*(\.xml|\.php|\.html|\.json).*</pattern>
+        <filename>controlfilter.php</filename>
+        <classname>ControlFilter</classname>
+    </filter>
+    
+</filters>

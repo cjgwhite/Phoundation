@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : templates.xml
+    Created on : 15 January 2009, 09:50
+    Author     : chris
+    Description:
+        Purpose of the document follows.
+-->
+
+<templates>
+
+    <template>
+        <description>
+            The default template for the system. Any URL that does not match another
+            template pattern will match this one and use this template.
+
+            THIS SHOULD ALWAYS BE THE LAST TEMPLATE DEFINITION.
+        </description>
+        <pattern>.*</pattern>
+        <filename>default.xsl</filename>
+        <navigation>default.xml</navigation>
+    </template>
+    
+</templates>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : users.xml.xml
+    Created on : March 11, 2009, 3:23 PM
+    Author     : chris
+    Description:
+        Purpose of the document follows.
+-->
+
+<users>
+    <user>
+        <username>chris</username>
+        <firstname>Chris</firstname>
+        <surname>White</surname>
+        <email></email>
+        <password>bobbins</password>
+        <rolelist>
+            <role>admin</role>
+        </rolelist>
+    </user>
+</users>

@@ -1,0 +1,184 @@
+Apr 19 09:03:44 SID= [info] Log file initialised
+Apr 19 09:03:44 SID= [info] Loaded init_params
+Apr 19 09:03:44 SID= [info] Request started
+Apr 19 09:03:44 SID= [debug] Initial setup complete
+Apr 19 09:03:44 SID= [debug] Bootstrap ***
+Apr 19 09:03:44 SID= [debug] Starting Dispatcher
+Apr 19 09:03:44 SID= [debug] URL = index.html
+Apr 19 09:03:44 SID= [debug] match!!
+Apr 19 09:03:44 SID= [debug] filter: AuthenticateFilter
+Apr 19 09:03:44 SID= [debug] filter created: AuthenticateFilter
+Apr 19 09:03:44 SID= [debug] match!!
+Apr 19 09:03:44 SID= [debug] filter: AuthoriseFilter
+Apr 19 09:03:44 SID= [debug] filter created: AuthoriseFilter
+Apr 19 09:03:44 SID= [debug] match!!
+Apr 19 09:03:44 SID= [debug] filter: TemplateFilter
+Apr 19 09:03:44 SID= [debug] filter created: TemplateFilter
+Apr 19 09:03:44 SID= [debug] match!!
+Apr 19 09:03:44 SID= [debug] filter: ControlFilter
+Apr 19 09:03:44 SID= [debug] filter created: ControlFilter
+Apr 19 09:03:44 SID= [debug] Dispatch ***
+Apr 19 09:03:44 SID= [debug] dispatching
+Apr 19 09:03:44 SID= [debug] Got response
+Apr 19 09:03:44 SID= [debug] do Filter 
+Apr 19 09:03:44 SID= [debug] Authenticating .. 
+Apr 19 09:03:44 SID= [debug] Authorising...
+Apr 19 09:03:44 SID= [debug] CHAIN return code::101
+Apr 19 09:03:44 SID= [debug] Filter Chain complete
+Apr 19 09:03:44 SID= [debug] Array
+(
+    [url] => index.html
+    [out-format] => HTML
+)
+
+Apr 19 09:03:44 SID= [debug] Converting data to XML
+Apr 19 09:03:44 SID= [debug] <?xml version="1.0" encoding="UTF-8"?>
+<data/>
+
+Apr 19 09:03:44 SID= [debug] Rendering... HTML
+Apr 19 09:03:44 SID= [debug] Render Completed
+Apr 19 09:03:44 SID= [debug] Complete ***
+Apr 19 09:03:48 SID= [info] Log file initialised
+Apr 19 09:03:48 SID= [info] Loaded init_params
+Apr 19 09:03:48 SID= [info] Request started
+Apr 19 09:03:48 SID= [debug] Initial setup complete
+Apr 19 09:03:48 SID= [debug] Bootstrap ***
+Apr 19 09:03:48 SID= [debug] Starting Dispatcher
+Apr 19 09:03:48 SID= [debug] URL = index.html
+Apr 19 09:03:48 SID= [debug] match!!
+Apr 19 09:03:48 SID= [debug] filter: AuthenticateFilter
+Apr 19 09:03:48 SID= [debug] filter created: AuthenticateFilter
+Apr 19 09:03:48 SID= [debug] match!!
+Apr 19 09:03:48 SID= [debug] filter: AuthoriseFilter
+Apr 19 09:03:48 SID= [debug] filter created: AuthoriseFilter
+Apr 19 09:03:48 SID= [debug] match!!
+Apr 19 09:03:48 SID= [debug] filter: TemplateFilter
+Apr 19 09:03:48 SID= [debug] filter created: TemplateFilter
+Apr 19 09:03:48 SID= [debug] match!!
+Apr 19 09:03:48 SID= [debug] filter: ControlFilter
+Apr 19 09:03:48 SID= [debug] filter created: ControlFilter
+Apr 19 09:03:48 SID= [debug] Dispatch ***
+Apr 19 09:03:48 SID= [debug] dispatching
+Apr 19 09:03:48 SID= [debug] Got response
+Apr 19 09:03:48 SID= [debug] do Filter 
+Apr 19 09:03:48 SID= [debug] Authenticating .. 
+Apr 19 09:03:48 SID= [debug] Authenticator::login()
+Apr 19 09:03:48 SID= [debug] logging in user
+Apr 19 09:03:48 SID= [debug] Authentication module = Local_Authenticator
+Apr 19 09:03:48 SID= [debug] LOCAL Authentication
+Apr 19 09:03:48 SID= [debug] Creating USER object
+Apr 19 09:03:48 SID= [debug] Setting ... username
+Apr 19 09:03:48 SID= [debug] Set to chris
+Apr 19 09:03:48 SID= [debug] Setting ... firstname
+Apr 19 09:03:48 SID= [debug] Set to Chris
+Apr 19 09:03:48 SID= [debug] Setting ... surname
+Apr 19 09:03:48 SID= [debug] Set to White
+Apr 19 09:03:48 SID= [debug] Setting ... email
+Apr 19 09:03:48 SID= [debug] Set to 
+Apr 19 09:03:48 SID= [debug] Setting ... rolelist
+Apr 19 09:03:48 SID= [debug] Set to Array
+Apr 19 09:03:48 SID= [debug] Setting ... sourceAttributeList
+Apr 19 09:03:48 SID= [debug] Set to 
+        
+        
+        
+        
+        
+        
+    
+Apr 19 09:03:48 SID= [debug] Authentication success - Local_Authenticator
+Apr 19 09:03:48 SID= [debug] Authorising...
+Apr 19 09:03:48 SID= [debug] Local_Authorisor
+Apr 19 09:03:48 SID= [debug] Array
+(
+    [0] => admin
+)
+
+Apr 19 09:03:48 SID= [debug] matched .*
+Apr 19 09:03:48 SID= [debug] Checking ... roles
+Apr 19 09:03:48 SID= [debug] Array
+(
+    [0] => admin
+)
+
+Apr 19 09:03:48 SID= [debug] SimpleXMLElement Object
+(
+    [role] => user
+)
+
+Apr 19 09:03:48 SID= [debug] Failed!
+Apr 19 09:03:48 SID= [debug] CHAIN return code::101
+Apr 19 09:03:48 SID= [debug] Filter Chain complete
+Apr 19 09:03:48 SID= [debug] Array
+(
+    [url] => index.html
+    [out-format] => HTML
+)
+
+Apr 19 09:03:48 SID= [debug] Converting data to XML
+Apr 19 09:03:48 SID= [debug] <?xml version="1.0" encoding="UTF-8"?>
+<data/>
+
+Apr 19 09:03:48 SID= [debug] Rendering... HTML
+Apr 19 09:03:48 SID= [debug] Render Completed
+Apr 19 09:03:48 SID= [debug] Complete ***
+Apr 19 09:03:51 SID= [info] Log file initialised
+Apr 19 09:03:51 SID= [info] Loaded init_params
+Apr 19 09:03:51 SID= [info] Request started
+Apr 19 09:03:51 SID= [debug] Initial setup complete
+Apr 19 09:03:51 SID= [debug] Bootstrap ***
+Apr 19 09:03:51 SID= [debug] Starting Dispatcher
+Apr 19 09:03:51 SID= [debug] URL = index.html
+Apr 19 09:03:51 SID= [debug] match!!
+Apr 19 09:03:51 SID= [debug] filter: AuthenticateFilter
+Apr 19 09:03:51 SID= [debug] filter created: AuthenticateFilter
+Apr 19 09:03:51 SID= [debug] match!!
+Apr 19 09:03:51 SID= [debug] filter: AuthoriseFilter
+Apr 19 09:03:51 SID= [debug] filter created: AuthoriseFilter
+Apr 19 09:03:51 SID= [debug] match!!
+Apr 19 09:03:51 SID= [debug] filter: TemplateFilter
+Apr 19 09:03:51 SID= [debug] filter created: TemplateFilter
+Apr 19 09:03:51 SID= [debug] match!!
+Apr 19 09:03:51 SID= [debug] filter: ControlFilter
+Apr 19 09:03:51 SID= [debug] filter created: ControlFilter
+Apr 19 09:03:51 SID= [debug] Dispatch ***
+Apr 19 09:03:51 SID= [debug] dispatching
+Apr 19 09:03:52 SID= [debug] Got response
+Apr 19 09:03:52 SID= [debug] do Filter 
+Apr 19 09:03:52 SID= [debug] Authenticating .. 
+Apr 19 09:03:52 SID= [debug] Authenticator::login()
+Apr 19 09:03:52 SID= [debug] Authorising...
+Apr 19 09:03:52 SID= [debug] Local_Authorisor
+Apr 19 09:03:52 SID= [debug] Array
+(
+    [0] => admin
+)
+
+Apr 19 09:03:52 SID= [debug] matched .*
+Apr 19 09:03:52 SID= [debug] Checking ... roles
+Apr 19 09:03:52 SID= [debug] Array
+(
+    [0] => admin
+)
+
+Apr 19 09:03:52 SID= [debug] SimpleXMLElement Object
+(
+    [role] => user
+)
+
+Apr 19 09:03:52 SID= [debug] Failed!
+Apr 19 09:03:52 SID= [debug] CHAIN return code::101
+Apr 19 09:03:52 SID= [debug] Filter Chain complete
+Apr 19 09:03:52 SID= [debug] Array
+(
+    [url] => index.html
+    [out-format] => HTML
+)
+
+Apr 19 09:03:52 SID= [debug] Converting data to XML
+Apr 19 09:03:52 SID= [debug] <?xml version="1.0" encoding="UTF-8"?>
+<data/>
+
+Apr 19 09:03:52 SID= [debug] Rendering... HTML
+Apr 19 09:03:52 SID= [debug] Render Completed
+Apr 19 09:03:52 SID= [debug] Complete ***

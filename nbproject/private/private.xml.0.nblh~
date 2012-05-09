@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/config/system.conf</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/classes/security/authmods/Local_Authenticator.php</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/config/init_params.xml</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/config/filters.xml</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/config/auth.xml</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/control/test_control.php</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/system/classes/db/PDOConnector.php</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/view/pages/test.xsl</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/view/pages/index.xsl</file>
+        <file>file:/Users/chris/NetBeansProjects/Phoundation/bootstrap.php</file>
+    </open-files>
+</project-private>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : nav.xml
+    Created on : 03 December 2008, 14:49
+    Author     : chris
+    Description:
+        Purpose of the document follows.
+-->
+
+<navigation>
+    <title>Phramework</title>
+    <breadcrumb>
+        <url>http://www.phramework.com</url>
+        <sectionname>Phramework</sectionname>
+    </breadcrumb>
+
+    <menu>
+        <url>index.html</url>
+        <menu-header>Framework default menu</menu-header>
+        <entry>
+            <title>Documentation</title>
+            <url>docs/index.html</url>
+            <submenu>
+                <entry>
+                    <title>Index</title>
+                    <url>docs/index.html</url>
+                </entry>
+                <entry>
+                    <title>Introduction</title>
+                    <url>docs/intro.html</url>
+                </entry>
+            </submenu>
+        </entry>
+    </menu>
+
+</navigation>

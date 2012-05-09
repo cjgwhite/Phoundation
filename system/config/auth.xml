@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <resource>
+        <pattern>.*</pattern>
+        <rolelist>
+            <role>admin</role>
+            <role>user</role>
+        </rolelist>
+
+        <processor>
+            <method>submit_change_processor</method>
+            <rolelist>
+                <role>edit</role>
+            </rolelist>
+        </processor>
+        
+    </resource>
+
+</resources>

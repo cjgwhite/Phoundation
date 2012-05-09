@@ -1,0 +1,9 @@
+AddCharset UTF-8 .php .html .xml
+
+RewriteEngine  on
+RewriteBase /~chris/framework
+
+RewriteCond    %{REQUEST_FILENAME}  -d
+RewriteRule    ^(.+[^/])$           $1/  [R]
+
+RewriteRule ^(.*)$ bootstrap.php [NS,PT]

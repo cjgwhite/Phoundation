@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : init_params.xml
+    Created on : May 6, 2009, 1:22 PM
+    Author     : chris
+    Description:
+        Purpose of the document follows.
+-->
+
+<init>
+    <includes>
+       <!-- <include type="require">adodb5/adodb.inc.php</include> -->
+    </includes>
+</init>
