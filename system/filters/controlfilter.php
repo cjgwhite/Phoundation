@@ -58,7 +58,7 @@ class ControlFilter extends AbstractFilter {
             if (count($path) > 0
                     && $path[0] != null
                     && $path[0] != ""
-                    && $class->hasMethod($path[0])
+                    && $class->hasMethod($path[0]. "_render")
             ) {
                 $this->actionName = array_shift($path);
             }
