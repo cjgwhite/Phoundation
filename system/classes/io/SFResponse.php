@@ -13,7 +13,7 @@ class SFResponse {
     private $JSON = "JSON";
 
     private $data = array();
-    private $xsls = array();
+    private $views = array();
     private $domi;
     private $log;
 
@@ -54,40 +54,55 @@ class SFResponse {
             echo json_encode($dataroot);
 
         } else {
-            $this->domi->Render($this->xsls, $this->$format);
+            $this->domi->Render($this->views, $this->$format);
         }
         
         
         $this->log->debug("Render Completed");
     }
 
+    public function clearViews() {
+        $this->views = array();
+    }
+    
+    //depricated
     public function clearXsls(){
-        $this->xsls = array();
+        $this->clearViews();
     }
+    
+    //depricated
     public function removeXsl($xsl) {
+        $this->removeView($xsl);
+    }
+    public function removeView($view) {
         global $APP_ROOT;
-        $filepath = "$APP_ROOT/view/$xsl";
-        $key = array_search($filepath, $this->xsls);
+        $filepath = "$APP_ROOT/view/$view";
+        $key = array_search($filepath, $this->views);
         if ($key !== false)
-            unset($this->xsls[$key]);
+            unset($this->views[$key]);
     }
+    
+    //depricated
     public function addXsl($xsl) {
-        $this->log->debug("adding XSL : $xsl");
-        if (is_array($xsl))
-            foreach ($xsl as $thisXsl)
-                $this->addXslFile($thisXsl);
-        else
-            $this->addXslFile($xsl);
+        $this->addView($xsl);
     }
-    private function addXslFile($xsl) {
+    public function addView($view) {
+        $this->log->debug("adding XSL : $view");
+        if (is_array($view))
+            foreach ($view as $thisXsl)
+                $this->addViewFile($thisXsl);
+        else
+            $this->addViewFile($view);
+    }
+    private function addViewFile($view) {
         global $APP_ROOT;
-		$filepath = "$APP_ROOT/view/$xsl";
+		$filepath = "$APP_ROOT/view/$view";
         if (file_exists($filepath)) {
-            if (array_search($filepath, $this->xsls) === false)
-                $this->xsls[] = $filepath;
-            $this->log->debug("XSL - $filepath - added");
+            if (array_search($filepath, $this->views) === false)
+                $this->views[] = $filepath;
+            $this->log->debug("VIEW - $filepath - added");
         } else {
-            $this->log->warning("XSL - $filepath - not found");
+            $this->log->warning("VIEW - $filepath - not found");
         }
     }
 
