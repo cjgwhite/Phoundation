@@ -80,33 +80,29 @@ class Local_Authorisor {
         return $authorised;
     }
 */
-    
-        public function authoriseProcess($url, $processName) {
-        global $system_log;
+    public function authoriseProcess($url, $processName) {
+
         $authorised = false;
 
         $authorisor = $this->getAuthDetails();
 
-        $system_log->debug("looging for -- $url");
         foreach ($authorisor->resource as $res) {
-            $pattern = "" . $res->pattern;
-            $system_log->debug("Matching :: $pattern");
+            $pattern = "".$res->pattern;
             if (eregi($pattern, $url) !== false) {
-                $system_log->debug("Matched");
+                foreach($res->process as $process) {
 
-                
-                foreach ($res->processor as $processor) {
-                    $system_log->debug("matching Process : {$processor->method} = $processName");
-                    if (eregi($processor->method, $processName) !== false) {
-                        
-                        if (isset($processor->rolelist))
-                            $authorised = $this->checkRoles($processor->rolelist);
-                        if (!$authorised && isset($processor->userlist))
-                            $authorised = $this->checkUser($processor->userlist);
-                        break;
+                    foreach ($process->processor as $processor) {
+                        if ($processor->method == $processName) {
+                            if (isset($processor->rolelist))
+                                $authorised = $this->checkRoles($processor->rolelist);
+                            if (!$authorised && isset($processor->userlist))
+                                $authorised = $this->checkUser($processor->userlist);
+                            break;
+                        }
                     }
+                    break;
+
                 }
-                break;
             }
         }
 
