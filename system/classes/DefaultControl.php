@@ -25,13 +25,17 @@ class DefaultControl {
         $this->response = &$response;
         $this->callback = &$callBack;
         $this->params = &$params;
+        
+        $data = array();
 
         if (isset($_REQUEST['__PROCESS__'])) {
             try {
                 $processorName = strtolower(str_replace(" ", "_", $_REQUEST['__PROCESS__'])) . "_processor";
-
-                if (Authorisor::authoriseProcess(get_class($this), $processorName))
-                    $this->$processorName($_REQUEST, $params);
+                if (Authorisor::authoriseProcess($_SERVER['REQUEST_URI'], $_REQUEST['__PROCESS__'])) {
+                    $this->log->debug("PROCESSOR $processorName -- AUTHORISED");
+                    $this->$processorName($data, $params);
+                } else 
+                    $this->log->debug("PROCESSOR $processorName -- NOT AUTHORISED");
 
             } catch (Exception $e) {
                 $response->addException($e);
@@ -39,12 +43,19 @@ class DefaultControl {
             }
         }
 
+        $view = "";
+        
         try {
-            $this->$actionName($params);
+            $view = $this->$actionName($params,$data);
+            
+            if ($view != null && $view != "")
+                $this->response->addXsl("pages/$view");
         } catch (Exception $e) {
             $response->addException($e);
         //throw $e;
         }
+        
+        $this->response->addData($data, "content", true);
 
     }
 }
