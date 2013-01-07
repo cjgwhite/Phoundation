@@ -11,5 +11,6 @@
 <init>
     <includes>
        <!-- <include type="require">adodb5/adodb.inc.php</include> -->
+        <!--<include type="require">includes/rb.php</include>-->
     </includes>
 </init>
