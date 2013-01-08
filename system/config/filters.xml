@@ -7,6 +7,14 @@
         <classname>PassThruFilter</classname>
     </filter>
 
+<!--
+    <filter>
+        <pattern>.*</pattern>
+        <filename>RedBeanFilter.php</filename>
+        <classname>RedBeanFilter</classname>
+    </filter>
+-->
+
     <filter>
         <pattern>.*</pattern>
         <filename>authenticatefilter.php</filename>
