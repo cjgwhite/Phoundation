@@ -21,7 +21,9 @@ class ControlFilter extends AbstractFilter {
             $match = array();
             while (count($path) > 0) {
                 $node = array_shift($path);
-                if (eregi(".*(\.xml|\.html|\.php|\.json).*", $node, $match)) {
+                
+                //if (eregi(".*(\.xml|\.html|\.php|\.json).*", $node, $match)) {
+                if (preg_match("/.*(\.xml|\.html|\.php|\.json).*/i", $node, $match) != false) {    
                     $this->log->debug("Control: " . substr($node, 0, (strlen($match[1])) * -1));
                     $this->controlName = substr($node, 0, (strlen($match[1])) * -1) . '_control';
                     break;

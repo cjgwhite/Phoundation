@@ -28,9 +28,13 @@ class Local_Authorisor {
         $authCount = 0;
         $matchedResources = 0;
         foreach($authorisor->resource as $res) {
-            $pattern = "".$res->pattern;
-            if (eregi($pattern, $url) !== false) {
-
+            /*
+                 $pattern = "".$res->pattern;
+                 if (eregi($pattern, $url) !== false) {
+             */
+            $pattern = "/". str_replace("/", "\/", "".$res->pattern) . "/i";
+            if (preg_match($pattern, $url) != false) {
+            
                 $system_log->debug("matched $pattern");
 
                 $matchedResources++;

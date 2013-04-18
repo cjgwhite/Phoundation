@@ -31,8 +31,12 @@ class Dispatcher {
         $filters = new SimpleXMLElement($filterconf);
         $this->log->debug("URL = ".$this->url);
         foreach($filters->filter as $filter) {
-            $pattern = "".$filter->pattern;
-            if (eregi($pattern, $this->url) !== false) {
+            /*
+             * $pattern = "".$filter->pattern;
+             * if (eregi($pattern, $this->url) !== false) {
+             */
+            $pattern = "/". str_replace("/", "\/", "".$filter->pattern) . "/i";
+            if (preg_match($pattern, $this->url) != false) {
                 $this->log->debug("match!!");
                 require_once("$APP_ROOT/system/filters/" . $filter->filename);
                 $filterClass = "".$filter->classname;

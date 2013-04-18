@@ -27,8 +27,8 @@ class TemplateFilter extends AbstractFilter {
 
         //Get the template for the URL.
         foreach ($templates->template as $templ) {
-            $pattern = "" . $templ->pattern;
-            if (eregi($pattern, $this->url) !== false) {
+            $pattern = "/". str_replace("/", "\/", "".$templ->pattern) . "/i";
+            if (preg_match($pattern, $this->url) != false) {
                 $this->log->debug("TEMPLATE MATCH : $pattern : {$this->url}");
                 $template = "templates/" . $templ->filename;
                 $navFile = $templ->navigation;
